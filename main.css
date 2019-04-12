@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-default: #868e96;
+  --color-black: #495057;
+  --color-blacker: #343a40;
+  --color-accent: #bd5d38;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-default);
+  font: 1.6rem/1.4 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 8rem 1.5rem;
+}
+
+section:not(:last-child) {
+  border-bottom: .1rem solid #e5e5e5;
+}

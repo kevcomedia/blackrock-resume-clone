@@ -64,19 +64,52 @@ a:hover {
 .subheading {
   font-size: 2.4rem;
   font-style: normal;
+  font-weight: 500;
   margin-bottom: var(--subheading-margin-bottom, 0);
 }
 
 .list {
   --heading-margin-bottom: 0;
   --heading-size: 2em;
+  --item-space: 3em;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .list li:not(:last-child) {
-  margin-bottom: 3em;
+  margin-bottom: var(--item-space);
+}
+
+.list-icon-bullets {
+  --item-space: unset;
+  padding-left: 2.5em;
+}
+
+.list-icon-bullets li {
+  position: relative;
+}
+
+.list-icon-bullets li::before {
+  color: var(--list-bullet-color, inherit);
+  content: var(--list-bullet-icon);
+  display: block;
+  font-family: 'Font Awesome 5 Free Solid';
+  left: -1.5em;
+  position: absolute;
+}
+
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 .5em;
+  padding: 0;
+  font-size: 3em;
+}
+
+.icon-row li:not(:last-child) {
+  margin-right: .4em;
 }
 
 .accented {
@@ -111,4 +144,14 @@ a:hover {
   list-style: none;
   margin: 2em 0 0;
   padding: 0;
+}
+
+.skills {
+  --list-bullet-icon: "\f00c";
+  --subheading-margin-bottom: 1em;
+}
+
+.awards {
+  --list-bullet-color: #ffc107;
+  --list-bullet-icon: "\f091";
 }

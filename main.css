@@ -27,6 +27,12 @@ section {
   padding: 8rem 1.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  section {
+    padding: 20rem 1.5rem;
+  }
+}
+
 section:not(:last-child) {
   border-bottom: .1rem solid #e5e5e5;
 }
@@ -126,19 +132,34 @@ a:hover {
 .list {
   --heading-margin-bottom: 0;
   --heading-size: 2em;
-  --item-space: 3em;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .list li:not(:last-child) {
-  margin-bottom: var(--item-space);
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .list li > p {
+    margin-top: 0;
+    flex-shrink: 0;
+    flex-basis: 20em;
+    text-align: right;
+  }
 }
 
 .list-icon-bullets {
-  --item-space: unset;
-  padding-left: 2.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 2.5em;
 }
 
 .list-icon-bullets li {

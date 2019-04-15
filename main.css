@@ -20,7 +20,7 @@ body {
   color: var(--color-default);
   font: 1.6rem/1.5 'Muli', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 5rem 0 0;
 }
 
 section {
@@ -43,7 +43,62 @@ a:hover {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: var(--link-hover-underline, underline);
+}
+
+.nav {
+  --widget-color: rgba(255, 255, 255, .5);
+  background: var(--color-accent);
+  font-size: 1.6rem;
+  padding: .5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-header {
+  --link-color: #fff;
+  --link-hover-color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header h1 {
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.nav-header img {
+  display: none;
+}
+
+.nav-header button {
+  background: inherit;
+  border-radius: .2em;
+  border: .1rem solid var(--widget-color);
+  color: var(--widget-color);
+  cursor: pointer;
+  padding: .5em 1.2em;
+}
+
+.nav-links {
+  --link-color: var(--widget-color);
+  --link-hover-color: rgba(255, 255, 255, .7);
+  --link-hover-underline: none;
+  display: none;
+  font-weight: 700;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  display: block;
+  padding: .5em 0;
 }
 
 .heading,

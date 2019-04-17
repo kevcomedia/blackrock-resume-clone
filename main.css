@@ -107,6 +107,52 @@ a:hover {
   padding: .5em 0;
 }
 
+@media screen and (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 27rem;
+  }
+  
+  section {
+    padding: 20rem 5rem;
+  }
+  
+  .nav {
+    left: 0;
+    width: 27rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .nav-header {
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  
+  .nav-header h1 {
+    display: none;
+  }
+  
+  .nav-header img {
+    border-radius: 50%;
+    border: .5em solid var(--widget-color);
+    display: block;
+    height: auto;
+    max-width: 10em;
+  }
+  
+  .nav-header button {
+    display: none;
+  }
+  
+  .nav-links {
+    display: unset;
+    text-align: center;
+  }
+}
+
 .heading,
 .subheading {
   font-family: 'Saira Extra Condensed', sans-serif;

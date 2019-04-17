@@ -1,0 +1,19 @@
+{
+  "name": "blackrock-resume",
+  "version": "1.0.0",
+  "description": "A template clone",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist/ && postcss --use autoprefixer cssnano -m -o dist/main.css main.css && cp *.html *.js dist/",
+    "deploy": "npm run build && surge dist/ https://gckev-clone-resume.surge.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.2",
+    "surge": "^0.20.3"
+  }
+}
